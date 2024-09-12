@@ -2,6 +2,15 @@ using UnityEditor;
 using UnityEngine;
 
 public class CustomEditorKeybinds : EditorWindow {
+	[MenuItem("Tools/Keybinds/Toggle Object #V")] // Shift + V
+	private static void EnableDisableObject() {
+		if (Selection.activeGameObject != null) {
+			Selection.activeGameObject.SetActive(!Selection.activeGameObject.activeSelf);
+		} else {
+			Debug.LogWarning("No object selected to enable/disable.");
+		}
+	}
+
 	[MenuItem("Tools/Keybinds/Reset Transform #T")] // Shift + T
 	private static void ResetTransform() {
 		if (Selection.activeTransform != null) {
@@ -24,7 +33,7 @@ public class CustomEditorKeybinds : EditorWindow {
 		}
 	}
 
-	[MenuItem("Tools/Keybinds/Reset Rotation #E")] // Shift + E
+	[MenuItem("Tools/Keybinds/Reset Rotation #R")] // Shift + R
 	private static void ResetRotation() {
 		if (Selection.activeTransform != null) {
 			Undo.RecordObject(Selection.activeTransform, "Reset Rotation");
@@ -45,9 +54,10 @@ public class CustomEditorKeybinds : EditorWindow {
 	}
 
 	// Disable the menu item if no object is selected
-	[MenuItem("Tools/Keybinds/Reset Transform #R", true)]
+	[MenuItem("Tools/Keybinds/Toggle Object #V", true)]
+	[MenuItem("Tools/Keybinds/Reset Transform #T", true)]
 	[MenuItem("Tools/Keybinds/Reset Position #P", true)]
-	[MenuItem("Tools/Keybinds/Reset Rotation #E", true)]
+	[MenuItem("Tools/Keybinds/Reset Rotation #R", true)]
 	[MenuItem("Tools/Keybinds/Reset Scale #S", true)]
 	private static bool ValidateKeybinds() {
 		return Selection.activeTransform != null;

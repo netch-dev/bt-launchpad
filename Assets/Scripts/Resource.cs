@@ -7,9 +7,8 @@ public class Resource : MonoBehaviour {
 	public void OnCollect(float amount) {
 		float collectedAmount = Mathf.Min(resourceAmount, amount);
 		resourceAmount -= collectedAmount;
-		Debug.Log($"Collected x{collectedAmount} {resourceType}. {resourceAmount} remain");
-		if (resourceAmount <= 0) {
-			Destroy(gameObject);
-		}
+		ResourceManager.Instance.AddResource(resourceType, collectedAmount);
+
+		if (resourceAmount <= 0) Destroy(gameObject);
 	}
 }
