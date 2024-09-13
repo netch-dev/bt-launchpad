@@ -7,24 +7,30 @@ public class ResourceManager : MonoBehaviour {
 
 	public Action OnResourceAmountChanged;
 
-	private void Awake() {
-		Instance = this;
+	public enum ResourceType {
+		Blood,
+		Wood,
+		Crystal
 	}
 
-	public Dictionary<string, float> resourceAmounts = new Dictionary<string, float>();
+	private void Awake() {
+		Instance = this;
 
-	public void AddResource(string resourceType, float amount) {
-		if (resourceAmounts.ContainsKey(resourceType)) {
-			resourceAmounts[resourceType] += amount;
-		} else {
-			resourceAmounts.Add(resourceType, amount);
+		foreach (ResourceType resourceType in Enum.GetValues(typeof(ResourceType))) {
+			resourceAmounts.Add(resourceType, 0);
 		}
+	}
+
+	public Dictionary<ResourceType, float> resourceAmounts = new Dictionary<ResourceType, float>();
+
+	public void AddResource(ResourceType resourceType, float amount) {
+		resourceAmounts[resourceType] += amount;
 
 		OnResourceAmountChanged?.Invoke();
 	}
 
-	public bool RemovedResource(string resourceType, float amount) {
-		bool hasEnough = resourceAmounts.ContainsKey(resourceType) && resourceAmounts[resourceType] >= amount;
+	public bool RemovedResource(ResourceType resourceType, float amount) {
+		bool hasEnough = resourceAmounts[resourceType] >= amount;
 		if (hasEnough) {
 			resourceAmounts[resourceType] -= amount;
 			OnResourceAmountChanged?.Invoke();
@@ -34,7 +40,7 @@ public class ResourceManager : MonoBehaviour {
 		return false;
 	}
 
-	public float GetResourceAmount(string resourceType) {
+	public float GetResourceAmount(ResourceType resourceType) {
 		if (resourceAmounts.ContainsKey(resourceType)) {
 			return resourceAmounts[resourceType];
 		} else {

@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d34a5dfe145e94babefaaa57e6a85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceType: Wood
+  resourceType: 1
   resourceAmount: 20
 --- !u!1 &4374309928867105431
 GameObject:

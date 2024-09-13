@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Resource : MonoBehaviour {
-	[SerializeField] private string resourceType;
+	[SerializeField] private ResourceManager.ResourceType resourceType;
 	[SerializeField] private float resourceAmount;
 
 	public void OnCollect(float amount) {
