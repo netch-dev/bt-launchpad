@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceType: {fileID: 11400000, guid: 28438008011581345a672a9098cd7369, type: 2}
-  resourceAmount: 20
+  resourceAmount: 45
 --- !u!82 &2410910729245367796
 AudioSource:
   m_ObjectHideFlags: 0

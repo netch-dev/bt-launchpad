@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceType: {fileID: 11400000, guid: 3e4215cc00cf6954cae77e2a52b92422, type: 2}
-  resourceAmount: 125
+  resourceAmount: 25
 --- !u!82 &2113470182561833703
 AudioSource:
   m_ObjectHideFlags: 0
