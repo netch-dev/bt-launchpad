@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1029304519091876789}
   - component: {fileID: 2945427917077732252}
   - component: {fileID: 8093331042187307183}
+  - component: {fileID: 2285691977728258892}
   m_Layer: 5
   m_Name: ResourcePopup
   m_TagString: Untagged
@@ -124,6 +125,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2285691977728258892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198750820450360496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3405281365482af408c4a2be24c3a7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 10
 --- !u!1 &934436294276359083
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,13 +16,18 @@ public class Worker : MonoBehaviour {
 	private Resource currentResource;
 
 	private Camera mainCamera;
+	private AudioSource audioSource;
+
 	private bool isSelected;
 
 	private void Start() {
 		mainCamera = Camera.main;
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void OnMouseDown() {
+		audioSource.pitch = Random.Range(0.9f, 1.1f);
+		audioSource.Play();
 		isSelected = true;
 	}
 

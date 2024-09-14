@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour {
 	[SerializeField] private BuildingTypeSO buildingTypeSO;
+	[SerializeField] private Transform buildEffectPrefab;
+
 	private Camera mainCamera;
 	private void Start() {
 		mainCamera = Camera.main;
@@ -25,6 +27,8 @@ public class Ghost : MonoBehaviour {
 																			 buildingTypeSO.constructionResourceCost.amount);
 			if (removedResources) {
 				Instantiate(buildingTypeSO.prefab, transform.position, transform.rotation);
+				Instantiate(buildEffectPrefab, transform.position, transform.rotation);
+
 				CameraAnimator.Instance.Shake();
 			} else {
 				//todo show a message that the player doesn't have enough resources
