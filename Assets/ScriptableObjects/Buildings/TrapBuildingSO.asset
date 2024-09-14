@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d300fe4aa9f4c64aaa7ea914b178f9c, type: 3}
+  m_Name: TrapBuildingSO
+  m_EditorClassIdentifier: 
+  nameString: Trap
+  prefab: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
+  sprite: {fileID: 4559900947336469197, guid: b95ad2eba305d8840a7609233bc63957, type: 3}
+  constructionResourceCost:
+    resourceType: {fileID: 11400000, guid: 56bcb4921896c034dae190d0f188c39a, type: 2}
+    amount: 15
+  healthAmountMax: 100

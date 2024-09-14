@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3611714}
   - component: {fileID: 3611713}
   - component: {fileID: 3611715}
+  - component: {fileID: 3611716}
   m_Layer: 5
   m_Name: Village Button
   m_TagString: Untagged
@@ -257,6 +258,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3611716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a54b0b9882ea442bc4d8d10f18880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: e015254d8cbcd7d4387e60c8a6347147, type: 2}
 --- !u!1 &34297255
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +283,7 @@ GameObject:
   - component: {fileID: 34297258}
   - component: {fileID: 34297257}
   - component: {fileID: 34297259}
+  - component: {fileID: 34297260}
   m_Layer: 5
   m_Name: Wood Button
   m_TagString: Untagged
@@ -391,6 +406,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &34297260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34297255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a54b0b9882ea442bc4d8d10f18880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: 0fa72d728cb47e34fa19821e3d9c4a72, type: 2}
 --- !u!1001 &43606513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -678,6 +706,7 @@ GameObject:
   - component: {fileID: 115003176}
   - component: {fileID: 115003175}
   - component: {fileID: 115003177}
+  - component: {fileID: 115003178}
   m_Layer: 5
   m_Name: Trap Button
   m_TagString: Untagged
@@ -800,6 +829,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &115003178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115003173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a54b0b9882ea442bc4d8d10f18880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: 511d750d05219e043839a349af000ca0, type: 2}
 --- !u!1001 &124301001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1277,6 +1319,9 @@ MonoBehaviour:
   bloodText: {fileID: 1406327538}
   woodText: {fileID: 872326361}
   crystalText: {fileID: 1224964778}
+  bloodResourceSO: {fileID: 11400000, guid: 3e4215cc00cf6954cae77e2a52b92422, type: 2}
+  woodResourceSO: {fileID: 11400000, guid: 56bcb4921896c034dae190d0f188c39a, type: 2}
+  crystalResourceSO: {fileID: 11400000, guid: 28438008011581345a672a9098cd7369, type: 2}
 --- !u!1001 &378687377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2431,6 +2476,7 @@ GameObject:
   - component: {fileID: 960490842}
   - component: {fileID: 960490841}
   - component: {fileID: 960490843}
+  - component: {fileID: 960490844}
   m_Layer: 5
   m_Name: Crystal Button
   m_TagString: Untagged
@@ -2553,6 +2599,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &960490844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960490839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a54b0b9882ea442bc4d8d10f18880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: 215408ad88fe3934e85972dab86a6923, type: 2}
 --- !u!1001 &976513377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3517,6 +3576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8bc2ba62ad426458112829e9d62d2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceTypeList: {fileID: 11400000, guid: bc0f01aaba4ac6e44bc74f36402fa58a, type: 2}
 --- !u!4 &1376053456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4981514047131452227, guid: 9fb67ba9201107843b4db3c4d4e92d41, type: 3}
@@ -3534,6 +3594,7 @@ GameObject:
   - component: {fileID: 1383600423}
   - component: {fileID: 1383600422}
   - component: {fileID: 1383600424}
+  - component: {fileID: 1383600425}
   m_Layer: 5
   m_Name: Human Button
   m_TagString: Untagged
@@ -3656,6 +3717,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1383600425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383600420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a54b0b9882ea442bc4d8d10f18880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: 55cb4bc30164a064caf435ce8eed38a3, type: 2}
 --- !u!1 &1399686067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,63 +5533,6 @@ Transform:
   - {fileID: 286486571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &44521371761119860
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073437719667530432, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755276033449409392, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
-      propertyPath: m_Name
-      value: Trap
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 48b25b15bac1cff4e94d25c5e8a0ff6e, type: 3}
 --- !u!1001 &6794441198547753847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5704,4 +5721,3 @@ SceneRoots:
   - {fileID: 6794441198547753847}
   - {fileID: 1365283884}
   - {fileID: 783155093}
-  - {fileID: 44521371761119860}

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Ghost : MonoBehaviour {
-	[SerializeField] private Transform prefabToSpawn;
+	[SerializeField] private BuildingTypeSO buildingTypeSO;
 	private Camera mainCamera;
 	private void Start() {
 		mainCamera = Camera.main;
@@ -21,7 +21,13 @@ public class Ghost : MonoBehaviour {
 
 	private void HandleInput() {
 		if (Input.GetMouseButtonDown(0)) {
-			Instantiate(prefabToSpawn, transform.position, transform.rotation);
+			bool removedResources = ResourceManager.Instance.RemovedResource(buildingTypeSO.constructionResourceCost.resourceType, buildingTypeSO.constructionResourceCost.amount); ;
+			if (removedResources) {
+				Instantiate(buildingTypeSO.prefab, transform.position, transform.rotation);
+			} else {
+				//todo show a message that the player doesn't have enough resources
+			}
+
 			gameObject.SetActive(false);
 		}
 

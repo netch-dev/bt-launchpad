@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfccf37914094c47a612c97f0aea35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 5117245459793374039, guid: 2bdbd25b9625fd740a6c4ea8672345b4, type: 3}
+  buildingTypeSO: {fileID: 11400000, guid: 55cb4bc30164a064caf435ce8eed38a3, type: 2}
 --- !u!1 &4139668796386901530
 GameObject:
   m_ObjectHideFlags: 0

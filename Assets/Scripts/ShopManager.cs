@@ -43,6 +43,8 @@ public class ShopManager : MonoBehaviour {
 
 		if (buildingGhosts.TryGetValue(buildingType, out Transform ghost)) {
 			ghost.gameObject.SetActive(true);
+		} else {
+			Debug.LogError($"Building ghost not found for building index #{buildingTypeIndex}");
 		}
 	}
 }
