@@ -3,34 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceManager : MonoBehaviour {
+	[SerializeField] private int sacrificeGoal = 25;
 	[SerializeField] private ResourceTypeListSO resourceTypeList;
 
 	public static ResourceManager Instance;
 
 	public Action OnResourceAmountChanged;
 
-	private Dictionary<ResourceTypeSO, float> resourceAmounts;
+	private Dictionary<string, float> resourceAmounts;
 
 	private void Awake() {
 		Instance = this;
 
-		resourceAmounts = new Dictionary<ResourceTypeSO, float>();
+		resourceAmounts = new Dictionary<string, float>();
 		foreach (ResourceTypeSO resourceType in resourceTypeList.list) {
-			resourceAmounts.Add(resourceType, 0);
+			resourceAmounts.Add(resourceType.shortname, 0);
 		}
 	}
 
 
-	public void AddResource(ResourceTypeSO resourceType, float amount) {
-		resourceAmounts[resourceType] += amount;
+	public void AddResource(string resourceShortname, float amount) {
+		resourceAmounts[resourceShortname] += amount;
 
 		OnResourceAmountChanged?.Invoke();
 	}
 
-	public bool RemovedResource(ResourceTypeSO resourceType, float amount) {
-		bool hasEnough = resourceAmounts[resourceType] >= amount;
+	public bool RemovedResource(string resourceShortname, float amount) {
+		bool hasEnough = resourceAmounts[resourceShortname] >= amount;
 		if (hasEnough) {
-			resourceAmounts[resourceType] -= amount;
+			resourceAmounts[resourceShortname] -= amount;
 			OnResourceAmountChanged?.Invoke();
 			return true;
 		}
@@ -38,11 +39,25 @@ public class ResourceManager : MonoBehaviour {
 		return false;
 	}
 
-	public float GetResourceAmount(ResourceTypeSO resourceType) {
-		if (resourceAmounts.ContainsKey(resourceType)) {
-			return resourceAmounts[resourceType];
+	public float GetResourceAmount(string resourceShortname) {
+		if (resourceAmounts.ContainsKey(resourceShortname)) {
+			return resourceAmounts[resourceShortname];
 		} else {
 			return 0;
 		}
+	}
+
+	public void AddSacrificedWorker(string sacrificedWorkerShortname) {
+		resourceAmounts[sacrificedWorkerShortname]++;
+		OnResourceAmountChanged?.Invoke();
+
+		if (resourceAmounts[sacrificedWorkerShortname] >= sacrificeGoal) {
+			Debug.Log("You have enough sacrifices to summon the demon");
+			//todo spawn the boss or win the game
+		}
+	}
+
+	public string GetSacrificedWorkerString(string sacrificedWorkerShortname) {
+		return $"{resourceAmounts[sacrificedWorkerShortname]}/{sacrificeGoal}";
 	}
 }

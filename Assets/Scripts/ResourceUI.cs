@@ -16,8 +16,8 @@ public class ResourceUI : MonoBehaviour {
 	}
 
 	private void UpdateResourceUI() {
-		bloodText.text = ResourceManager.Instance.GetResourceAmount(bloodResourceSO).ToString("N0");
-		woodText.text = ResourceManager.Instance.GetResourceAmount(woodResourceSO).ToString("N0");
-		crystalText.text = ResourceManager.Instance.GetResourceAmount(crystalResourceSO).ToString("N0");
+		bloodText.text = ResourceManager.Instance.GetResourceAmount(bloodResourceSO.shortname).ToString("N0");
+		woodText.text = ResourceManager.Instance.GetResourceAmount(woodResourceSO.shortname).ToString("N0");
+		crystalText.text = ResourceManager.Instance.GetResourceAmount(crystalResourceSO.shortname).ToString("N0");
 	}
 }

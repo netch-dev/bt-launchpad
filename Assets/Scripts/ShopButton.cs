@@ -14,7 +14,7 @@ public class ShopButton : MonoBehaviour {
 	}
 
 	private void OnResourceAmountChanged() {
-		float currentResourceAmount = ResourceManager.Instance.GetResourceAmount(buildingType.constructionResourceCost.resourceType);
+		float currentResourceAmount = ResourceManager.Instance.GetResourceAmount(buildingType.constructionResourceCost.resourceType.shortname);
 		bool hasEnoughResources = currentResourceAmount >= buildingType.constructionResourceCost.amount;
 		button.interactable = hasEnoughResources;
 	}

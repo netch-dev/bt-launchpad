@@ -21,7 +21,8 @@ public class Ghost : MonoBehaviour {
 
 	private void HandleInput() {
 		if (Input.GetMouseButtonDown(0)) {
-			bool removedResources = ResourceManager.Instance.RemovedResource(buildingTypeSO.constructionResourceCost.resourceType, buildingTypeSO.constructionResourceCost.amount); ;
+			bool removedResources = ResourceManager.Instance.RemovedResource(buildingTypeSO.constructionResourceCost.resourceType.shortname,
+																			 buildingTypeSO.constructionResourceCost.amount);
 			if (removedResources) {
 				Instantiate(buildingTypeSO.prefab, transform.position, transform.rotation);
 			} else {
