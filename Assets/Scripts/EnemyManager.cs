@@ -7,6 +7,10 @@ public class EnemyManager : MonoBehaviour {
 	[SerializeField] private float timeBetweenSpawns;
 	private float nextSpawnTime;
 
+	private void Awake() {
+		nextSpawnTime = Time.time + timeBetweenSpawns;
+	}
+
 	private void Update() {
 		if (Time.time >= nextSpawnTime) {
 			SpawnEnemy();
