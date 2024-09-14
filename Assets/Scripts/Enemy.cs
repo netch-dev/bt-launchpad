@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour {
 		}
 
 		if (collision.CompareTag("Trap")) {
+			CameraAnimator.Instance.Shake();
+
 			Destroy(collision.gameObject);
 			Instantiate(bloodPrefab, gameObject.transform.position, Quaternion.identity);
 			Destroy(gameObject);
