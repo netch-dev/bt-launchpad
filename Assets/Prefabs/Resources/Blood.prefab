@@ -145,3 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceType: {fileID: 11400000, guid: 3e4215cc00cf6954cae77e2a52b92422, type: 2}
   resourceAmount: 125
+  resourcePopupPrefab: {fileID: 4791895921506961684, guid: a1d982e19a6724748a64f06fca297f4c, type: 3}
+  resourcePopupOffset: {x: 0, y: 1, z: 0}

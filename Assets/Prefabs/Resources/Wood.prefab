@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceType: {fileID: 11400000, guid: 56bcb4921896c034dae190d0f188c39a, type: 2}
   resourceAmount: 20
+  resourcePopupPrefab: {fileID: 4791895921506961684, guid: a1d982e19a6724748a64f06fca297f4c, type: 3}
+  resourcePopupOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &4374309928867105431
 GameObject:
   m_ObjectHideFlags: 0

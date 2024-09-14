@@ -1,7 +1,12 @@
+using TMPro;
 using UnityEngine;
 
 public class Worker : MonoBehaviour {
 	[SerializeField] private LayerMask resourceLayer;
+
+	[SerializeField] private Transform resourcePopupPrefab;
+	[SerializeField] private Vector3 resourcePopupOffset;
+
 	[SerializeField] private float collectDistance;
 
 	[SerializeField] private float collectAmount;
@@ -53,7 +58,10 @@ public class Worker : MonoBehaviour {
 		if (currentResource != null) {
 			if (Time.time >= nextCollectTime) {
 				nextCollectTime = Time.time + collectInterval;
-				currentResource.OnCollect(collectAmount);
+				float collectedAmount = currentResource.OnCollect(collectAmount);
+
+				Transform resourcePopup = Instantiate(resourcePopupPrefab, transform.position + resourcePopupOffset, Quaternion.identity);
+				resourcePopup.gameObject.GetComponentInChildren<TextMeshProUGUI>()?.SetText($"+{collectedAmount}");
 			}
 		}
 	}
