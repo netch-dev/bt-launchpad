@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377c8044169d26545bfc7740b81ecfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 6237902922228006510, guid: 3db2752d527e9304892ad1b52f532f20, type: 3}
   speed: 5
   minX: -25
   maxX: 25

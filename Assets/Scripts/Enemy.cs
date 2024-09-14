@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour {
+	[SerializeField] private Transform bloodPrefab;
+
 	[SerializeField] private float speed;
 
 	[SerializeField] private float minX, maxX, minY, maxY;
@@ -23,11 +23,15 @@ public class Enemy : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		Debug.Log("Collision with " + collision.name);
 		if (collision.CompareTag("Altar")) {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 
+		if (collision.CompareTag("Trap")) {
+			Destroy(collision.gameObject);
+			Instantiate(bloodPrefab, gameObject.transform.position, Quaternion.identity);
+			Destroy(gameObject);
+		}
 	}
 
 	private Vector3 GetRandomPosition() {

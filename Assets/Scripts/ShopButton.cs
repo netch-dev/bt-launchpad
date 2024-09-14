@@ -10,6 +10,7 @@ public class ShopButton : MonoBehaviour {
 		button = GetComponent<Button>();
 
 		ResourceManager.Instance.OnResourceAmountChanged += OnResourceAmountChanged;
+		OnResourceAmountChanged();
 	}
 
 	private void OnResourceAmountChanged() {
