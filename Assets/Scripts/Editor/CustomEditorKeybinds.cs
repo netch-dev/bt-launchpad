@@ -17,6 +17,8 @@ public class CustomEditorKeybinds : EditorWindow {
 			Undo.RecordObject(Selection.activeTransform, "Reset Transform");
 			Selection.activeTransform.position = Vector3.zero;
 			Selection.activeTransform.rotation = Quaternion.identity;
+			Selection.transforms[0].localPosition = Vector3.zero;
+			Selection.transforms[0].localRotation = Quaternion.identity;
 			Selection.activeTransform.localScale = Vector3.one;
 		} else {
 			Debug.LogWarning("No object selected to reset transform.");
